@@ -1,6 +1,4 @@
-<?php
-//resouces/views/products/index.blade.php
-?>
+
 @extends('layouts.main')
 @section('title', 'Trang liệt kê')
 @section('content')
@@ -15,7 +13,7 @@
                 <td>{{ $category->id }}</td>
                 <td>{{ $category->name }}</td>
                 <td>
-                    <a href="{{ url('category/update/' . $category->id) }}">
+                <a href="{{route('categories.edit',$category->id)}}">
                         Update
                     </a>
                     <a href="{{ url('category/delete/' . $category->id) }}"
